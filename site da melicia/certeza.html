@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=23, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Certeza que quer abandona a Mari</h1>
+</div>
+    <div class="button-container">
+    <button class="não">Não</button>
+    <button class="sim"><a href="./sim.html"></a><a href="./sim.html">Sim</a></button>
+</div>
+    <script>
+const botaoNao = document.querySelector('.não');
+
+botaoNao.addEventListener('click', () => {
+  // Definindo limites para as posições aleatórias
+  const maxLeft = window.innerWidth - botaoNao.offsetWidth;
+  const maxTop = window.innerHeight - botaoNao.offsetHeight;
+
+  // Gerando coordenadas aleatórias dentro dos limites
+  const newLeft = Math.floor(Math.random() * maxLeft);
+  const newTop = Math.floor(Math.random() * maxTop);
+
+  // Aplicando as novas coordenadas ao botão
+  botaoNao.style.left = newLeft + 'px';
+  botaoNao.style.top = newTop + 'px';
+});
+    </script>
+</body>
+</html>
